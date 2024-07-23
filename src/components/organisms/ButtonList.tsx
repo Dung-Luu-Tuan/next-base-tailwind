@@ -1,4 +1,8 @@
 import Button from "@/components/atoms/Button";
+import Loading from "@/public/icons/interface/outline/loading.svg"
+import Mail from "@/public/icons/communication/outline/mail.svg";
+import ChevronsUpDown from "@/public/icons/interface/outline/chevrons-up-down.svg";
+import Plus from "@/public/icons/interface/outline/plus.svg"
 
 export default function ButtonList() {
   return (
@@ -70,17 +74,26 @@ export default function ButtonList() {
         </Button>
       </div>
       <div className="flex flex-center items-center justify-center pt-10 gap-4">
-        <Button type="primary with icon">Login with Email</Button>
+        <Button type="primary with icon">
+          <Mail className="w-base h-base stroke-base-white" />
+          <span>Login with Email</span>
+        </Button>
       </div>
       <div className="flex flex-center items-center justify-center pt-10 gap-4">
-        <Button type="outline with icon">Cancel</Button>
+        <Button type="outline with icon">
+          <span>Cancel</span>
+          <ChevronsUpDown className="w-base h-base stroke-base-black" />
+        </Button>
       </div>
       <div className="flex flex-center items-center justify-center pt-10 gap-4">
-        <Button type="icon">&times;</Button>
-        <Button type="icon round">&times;</Button>
+        <Button type="icon"><Plus className="w-base h-base stroke-base-black" /></Button>
+        <Button type="icon round"><Plus className="w-base h-base stroke-base-black" /></Button>
       </div>
       <div className="flex flex-center items-center justify-center pt-10 gap-4">
-        <Button type="loading">Loading</Button>
+        <Button type="loading">
+          <Loading className="w-base h-base stroke-base-white" />
+          <span>Loading</span>
+        </Button>
       </div>
     </>
   );
