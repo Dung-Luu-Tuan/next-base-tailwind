@@ -1,12 +1,34 @@
 import Button from "@/components/atoms/Button";
-import Loading from "@/public/icons/interface/outline/loading.svg"
+import Loading from "@/public/icons/interface/outline/loading.svg";
 import Mail from "@/public/icons/communication/outline/mail.svg";
 import ChevronsUpDown from "@/public/icons/interface/outline/chevrons-up-down.svg";
-import Plus from "@/public/icons/interface/outline/plus.svg"
+import Plus from "@/public/icons/interface/outline/plus.svg";
+import NavigationItem from "@/components/atoms/NavigationItem";
+import TextArea from "@/components/atoms/TextArea";
 
 export default function ButtonList() {
   return (
     <>
+      <nav className="flex flex-center items-center justify-center pt-10 gap-4">
+        <NavigationItem href="/" label="Home" />
+        <NavigationItem href="/about" label="About" />
+        <NavigationItem href="/contact" label="Contact" />
+      </nav>
+      <div className="flex flex-center items-center justify-center pt-10 gap-4">
+        <TextArea
+          title="Your message"
+          placeholder="Type your message here"
+          message="Your message will be copied to the support team."
+          type="button"
+        />
+      </div>
+      <div className="flex flex-center items-center justify-center pt-10 gap-4">
+        <TextArea
+          title="Your message"
+          placeholder="Type your message here"
+          message="Your message will be copied to the support team."
+        />
+      </div>
       <div className="flex flex-center items-center justify-center pt-10 gap-4">
         <Button type="default" size="sm">
           Continue
@@ -86,8 +108,12 @@ export default function ButtonList() {
         </Button>
       </div>
       <div className="flex flex-center items-center justify-center pt-10 gap-4">
-        <Button type="icon"><Plus className="w-base h-base stroke-base-black" /></Button>
-        <Button type="icon round"><Plus className="w-base h-base stroke-base-black" /></Button>
+        <Button type="icon">
+          <Plus className="w-base h-base stroke-base-black" />
+        </Button>
+        <Button type="icon round">
+          <Plus className="w-base h-base stroke-base-black" />
+        </Button>
       </div>
       <div className="flex flex-center items-center justify-center pt-10 gap-4">
         <Button type="loading">

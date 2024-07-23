@@ -34,13 +34,12 @@ const Button: React.FC<ButtonProps> = ({
     lg: "px-l py-sm",
   };
 
-  const general = "text-sm font-medium"
+  const general =
+    "text-sm font-medium flex flex-center items-center justify-center";
 
   const typeStyles = {
-    default:
-      "bg-primary-main hover:bg-primary-600 text-base-white rounded-m",
-    destructive:
-      "bg-error-100 hover:bg-error-200 text-base-white rounded-m",
+    default: "bg-primary-main hover:bg-primary-600 text-base-white rounded-m",
+    destructive: "bg-error-100 hover:bg-error-200 text-base-white rounded-m",
     outline:
       "bg-base-white hover:bg-neutrals-100 border border-neutrals-200 text-base-black hover:text-neutrals-900 rounded-m",
     secondary:
@@ -55,8 +54,7 @@ const Button: React.FC<ButtonProps> = ({
     icon: "px-sm py-sm border border-neutrals-200 text-base-black hover:bg-neutrals-100 rounded-m",
     "icon round":
       "px-sm py-sm border border-neutrals-200 text-base-black hover:bg-neutrals-100 rounded-round",
-    loading:
-      "text-base-white bg-primary-main opacity-50 rounded-m px-sm py-sm",
+    loading: "text-base-white bg-primary-main opacity-50 rounded-m px-sm py-sm",
   };
 
   return (
