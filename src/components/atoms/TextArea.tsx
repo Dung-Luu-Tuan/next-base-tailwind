@@ -29,7 +29,7 @@ const TextArea: React.FC<TextAreaProps> = ({
 }) => {
   return (
     <div className="flex flex-col gap-xs">
-      <label className="text-sm font-medium text-base-black">{title}</label>
+      <label className={`text-sm font-medium ${disabled ? "text-neutrals-800" : "text-base-black"}`}>{title}</label>
       <textarea
         className="w-[530px] h-20 rounded-m border border-neutral-200 text-neutral-700 px-sm py-xs focus:outline-none focus:ring-0 focus:border-primary-main"
         placeholder={placeholder}
@@ -41,9 +41,13 @@ const TextArea: React.FC<TextAreaProps> = ({
       {type === "message" ? (
         <p className="text-sm font-medium text-neutral-700">{message}</p>
       ) : (
-        <Button type="default" size="default">
+        <button
+          type="button"
+          className={`text-sm font-medium flex flex-center items-center justify-center px-m py-xxs ${disabled ? "bg-neutrals-200 text-neutrals-800" : "bg-primary-main text-base-white"} rounded-m`}
+          disabled={disabled}
+        >
           {buttonText}
-        </Button>
+        </button>
       )}
     </div>
   );
